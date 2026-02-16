@@ -22,6 +22,12 @@ public class ExpenseService {
     }
 
     // TODO: Supprimer une dépense
+    public void deleteExpense(Long id){
 
+        if(id == null){
+            throw new RuntimeException("l'id ne doit être null");
+        }
+        repository.deleteById(id);
+    }
     // TODO: Obtenir la somme totale dépensée
 }
