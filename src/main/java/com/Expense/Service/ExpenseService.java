@@ -29,5 +29,16 @@ public class ExpenseService {
         }
         repository.deleteById(id);
     }
+
     // TODO: Obtenir la somme totale dépensée
+    public Double sumExpense(){
+        Double sum = 0.;
+
+        Iterable<Expense> listOfExpense = repository.findAll();
+
+        for(Expense expense : listOfExpense){
+            sum += expense.getAmount();
+        }
+        return sum;
+    }
 }
