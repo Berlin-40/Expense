@@ -17,6 +17,9 @@ public class ExpenseService {
     }
     
     // TODO: Ajouter une nouvelle dépense
+    public Expense createExpense( Expense expense){
+        return repository.save(expense);
+    }
 
     // TODO: Supprimer une dépense
 
