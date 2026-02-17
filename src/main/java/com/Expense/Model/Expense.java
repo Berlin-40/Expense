@@ -14,10 +14,8 @@ public class Expense {
     
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    
     private Long id;
     private String label;
     private Double amount;
     private String category;
-    private Date date;
 }
