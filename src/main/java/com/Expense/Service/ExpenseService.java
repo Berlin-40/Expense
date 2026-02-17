@@ -31,7 +31,7 @@ public class ExpenseService {
     }
 
     // TODO: Obtenir la somme totale dépensée
-    public Double sumExpense(){
+    public Double totalExpense(){
         Double sum = 0.;
 
         Iterable<Expense> listOfExpense = repository.findAll();
